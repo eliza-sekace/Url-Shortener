@@ -5,6 +5,8 @@ use App\Views\View;
 
 require_once 'vendor/autoload.php';
 session_start();
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
 $dispatcher = FastRoute\simpleDispatcher(function (FastRoute\RouteCollector $r) {
     $r->addRoute('GET', '/', ['App\Controllers\ShortenerController', 'create']);

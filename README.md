@@ -4,23 +4,11 @@ To run the app, first install dependencies using composer.
 Run ```composer install```
 
 The application uses database and one table is needed.
+Table schema is shown in ```short_urls.sql```
 
-Table name: 'short_urls';
+The database configuration example is shown in ```.env.example``` <br>
 
-| Column     | Data type |
-| ----------- | ----------- |
-| id     | Primary key, INT       |
-| long_url  | UNI, VARCHAR, 255        |
-| short_code | UNI, VARCHAR, 11     |
-
-The database configuration is in App\Database\Connection.
-By default configuration:
-
-|Parameter   | Value |
-| ----------- | ----------- |
-| dbname    | short_urls      |
-| user | root       |
-| host | localhost   |
+Copy ```.env.example``` data to ```.env``` file and replace your data, to run the app.
 
 To run app locally, execute: <br>
 ```php -S localhost:8000```

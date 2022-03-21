@@ -6,15 +6,13 @@ use Doctrine\DBAL\DriverManager;
 
 class Connection
 {
-    protected static array $params = [
-        'dbname' => 'short_urls',
-        'user' => 'root',
-        'host' => 'localhost',
-        'driver' => 'pdo_mysql',
-    ];
-
     public static function connect()
     {
-        return DriverManager::getConnection(self::$params);
+        return DriverManager::getConnection([
+            'dbname' => $_ENV['DATABASE_NAME'],
+            'user' => $_ENV['DATABASE_USER'],
+            'host' => $_ENV['DATABASE_HOST'],
+            'driver' => $_ENV['DATABASE_DRIVER'],
+        ]);
     }
 }
