@@ -1,3 +1,5 @@
+![Article page view](./urlShortener.gif)
+
 This is a simple URL shortener app, using few packages.
 To run the app, first install dependencies using composer.
 
